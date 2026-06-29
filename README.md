@@ -9,19 +9,19 @@
 - `koko_import.txt`：生成后的导入清单，格式为 `表情名 URL`。
 - `update.bat`：一键提交、推送并重新生成导入清单。
 
-## CDN 地址规则
+## 图片地址规则
 
-所有图片统一使用 jsDelivr CDN：
+所有图片统一使用 GitHub Pages：
 
 ```text
-https://cdn.jsdelivr.net/gh/jing67023-eng/koko-stickers@main/stickers/文件名
+https://jing67023-eng.github.io/koko-stickers/stickers/文件名
 ```
 
 例如：
 
 ```text
-猫点赞 https://cdn.jsdelivr.net/gh/jing67023-eng/koko-stickers@main/stickers/猫点赞.jpg
-猫趴桌 https://cdn.jsdelivr.net/gh/jing67023-eng/koko-stickers@main/stickers/猫趴桌.gif
+猫点赞 https://jing67023-eng.github.io/koko-stickers/stickers/猫点赞.jpg
+猫趴桌 https://jing67023-eng.github.io/koko-stickers/stickers/猫趴桌.gif
 ```
 
 ## 日常更新流程
@@ -48,7 +48,7 @@ python generate_koko_import.py
 也就是：
 
 - 上传最新的 `stickers/` 到 GitHub。
-- 让 jsDelivr 可以通过 CDN 访问这些图片。
+- 让 GitHub Pages 可以访问这些图片。
 - 重新生成本地 `koko_import.txt`。
 
 ## 手动生成导入清单
@@ -62,12 +62,13 @@ python generate_koko_import.py
 生成格式固定为 Koko 支持的 `名字 URL`：
 
 ```text
-表情名 https://cdn.jsdelivr.net/gh/jing67023-eng/koko-stickers@main/stickers/文件名
+表情名 https://jing67023-eng.github.io/koko-stickers/stickers/文件名
 ```
 
 ## 注意事项
 
 - GIF 不要转成静态图，直接放进 `stickers/`。
 - 文件名不要有空格。
-- GitHub 仓库需要是公开仓库，jsDelivr 才能正常访问图片。
+- GitHub 仓库需要是公开仓库。
+- GitHub Pages 需要在仓库设置里开启，来源选择 `main` 分支和根目录。
 - 如果 `git push` 要求登录，请按 GitHub 提示完成登录或配置访问令牌。

@@ -1,7 +1,7 @@
 from pathlib import Path
 
 
-BASE_URL = "https://cdn.jsdelivr.net/gh/jing67023-eng/koko-stickers@main/stickers"
+BASE_URL = "https://jing67023-eng.github.io/koko-stickers/stickers"
 SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".gif"}
 PROJECT_DIR = Path(__file__).resolve().parent
 STICKERS_DIR = PROJECT_DIR / "stickers"
