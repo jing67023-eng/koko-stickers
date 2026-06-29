@@ -1,4 +1,5 @@
 from pathlib import Path
+from urllib.parse import quote
 
 
 BASE_URL = "https://jing67023-eng.github.io/koko-stickers/stickers"
@@ -31,7 +32,8 @@ def main() -> int:
             continue
 
         sticker_name = path.stem
-        lines.append(f"{sticker_name} {BASE_URL}/{path.name}")
+        url_name = quote(path.name)
+        lines.append(f"{sticker_name} {BASE_URL}/{url_name}")
 
     OUTPUT_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
 

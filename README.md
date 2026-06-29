@@ -20,8 +20,8 @@ https://jing67023-eng.github.io/koko-stickers/stickers/文件名
 例如：
 
 ```text
-猫点赞 https://jing67023-eng.github.io/koko-stickers/stickers/猫点赞.jpg
-猫趴桌 https://jing67023-eng.github.io/koko-stickers/stickers/猫趴桌.gif
+猫点赞 https://jing67023-eng.github.io/koko-stickers/stickers/%E7%8C%AB%E7%82%B9%E8%B5%9E.jpg
+猫趴桌 https://jing67023-eng.github.io/koko-stickers/stickers/%E7%8C%AB%E8%B6%B4%E6%A1%8C.gif
 ```
 
 ## 日常更新流程
@@ -62,8 +62,10 @@ python generate_koko_import.py
 生成格式固定为 Koko 支持的 `名字 URL`：
 
 ```text
-表情名 https://jing67023-eng.github.io/koko-stickers/stickers/文件名
+表情名 https://jing67023-eng.github.io/koko-stickers/stickers/%E7%BC%96%E7%A0%81%E5%90%8E%E7%9A%84%E6%96%87%E4%BB%B6%E5%90%8D
 ```
+
+表情名会保留中文，URL 里的中文文件名会自动编码，兼容性更好。
 
 ## 注意事项
 
